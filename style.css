@@ -120,3 +120,12 @@ body{transition:opacity .3s,background .3s,color .3s;animation:fade .6s}body.lea
 input,select{transition:outline-color .25s,box-shadow .25s,transform .25s}input:focus{box-shadow:0 0 0 4px color-mix(in srgb,var(--ink) 10%,transparent)}
 @media(max-width:900px){.imgc{height:240px}.hours.grow{min-height:0}.map{height:260px}.reservation .head,.about-top{min-height:0}.owners{height:340px}.foot{min-height:0}.dish .ph{width:86px;height:64px}}
 @media(prefers-reduced-motion:reduce){*,:before,:after{animation:none!important;transition:none!important}.js .reveal{opacity:1!important;transform:none!important}}
+
+/* À propos : photo nette, carte alignée sur la maquette */
+.about .hero{container-type:size}.about .hero:before{display:none}
+.about .stage{position:absolute;left:50%;top:50%;translate:-50% -50%;width:max(100cqw,calc(100cqh*913/784));aspect-ratio:913/784;container-type:inline-size;background:url(images/hero-about.jpg) center/100% 100%;animation:zoom 2.4s cubic-bezier(.16,.8,.2,1)}
+.about .aq{--q:#0f120e;--qt:#f3f0e4;left:5.6%;top:19%;bottom:auto;width:74%;height:75%;border-radius:calc(var(--f)*1.4);padding:8% 9%;display:flex;flex-direction:column;justify-content:flex-start;gap:6%}
+.about .aq h2{font-size:clamp(24px,6.6cqw,92px);margin:0}
+.about .aq p{font-size:max(11px,1.7cqw);line-height:1.65;margin:0}
+@media(max-width:900px){.about .hero{height:auto;min-height:0;aspect-ratio:913/784}.about .aq{padding:7%}}
+@media(max-width:520px){.about .aq{left:5.6%;right:auto;bottom:auto;width:74%}}
